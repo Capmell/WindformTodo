@@ -125,9 +125,14 @@ namespace WindformTodo
             if (todo != null)
             {
                 todo.IsDone = !todo.IsDone;
+                MessageBox.Show("task status changed");
 
                 UpdateListBox();
             }
+            
+            
+
+            
         }
 
         private void TodoApp_KeyPress(object sender, KeyPressEventArgs e)
