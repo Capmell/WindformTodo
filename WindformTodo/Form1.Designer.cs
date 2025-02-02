@@ -38,6 +38,7 @@
             txtTaskdescription = new TextBox();
             gbTasklist = new GroupBox();
             lbTasksLists = new ListBox();
+            lblTaskcom = new Label();
             gbTasks.SuspendLayout();
             gbDuedate.SuspendLayout();
             gbTasklist.SuspendLayout();
@@ -127,6 +128,7 @@
             // 
             // gbTasklist
             // 
+            gbTasklist.Controls.Add(lblTaskcom);
             gbTasklist.Controls.Add(lbTasksLists);
             gbTasklist.Location = new Point(12, 99);
             gbTasklist.Name = "gbTasklist";
@@ -145,6 +147,15 @@
             lbTasksLists.TabIndex = 0;
             lbTasksLists.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
+            // lblTaskcom
+            // 
+            lblTaskcom.AutoSize = true;
+            lblTaskcom.Location = new Point(96, 4);
+            lblTaskcom.Name = "lblTaskcom";
+            lblTaskcom.Size = new Size(163, 15);
+            lblTaskcom.TabIndex = 1;
+            lblTaskcom.Text = "Please click to complete tasks";
+            // 
             // TodoApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -161,6 +172,7 @@
             gbDuedate.ResumeLayout(false);
             gbDuedate.PerformLayout();
             gbTasklist.ResumeLayout(false);
+            gbTasklist.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -176,5 +188,6 @@
         private Button btnClear;
         private GroupBox gbTasklist;
         private ListBox lbTasksLists;
+        private Label lblTaskcom;
     }
 }
